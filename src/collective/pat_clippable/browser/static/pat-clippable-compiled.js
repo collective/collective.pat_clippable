@@ -3717,13 +3717,11 @@ require([
     init: function () {
       var self = this;
       
-      console.log(ClipboardJS.isSupported());
       if (ClipboardJS.isSupported()) {
         self.$el.after(self.addButton);
       }
     },
     addButton: function(index, html) {
-      console.log(this)
       var that = this
       
       if ($(this).is('input')) {
@@ -3759,12 +3757,9 @@ require([
       })
       
       var clipboard = new ClipboardJS(button)
-      console.log(clipboard)
     
       clipboard.on('success', function(e) {
-        console.info('Action:', e.action)
-        console.info('Text:', e.text)
-        console.info('Trigger:', e.trigger)
+        console.debug('Text:', e.text)
       })
       return button
     }
