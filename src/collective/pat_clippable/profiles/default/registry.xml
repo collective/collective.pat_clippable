@@ -4,5 +4,63 @@
     i18n:domain="collective.pat_clippable">
 
 <!-- -*- extra stuff goes here -*- -->
+  <records interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema" prefix="plone">
+    <value key="content_css">
+      <element>++plone++static/components/tinymce-builded/js/tinymce/skins/lightgray/content.min.css</element>
+      <element>++plone++collective.pat_clippable/pat-clippable.less</element>
+    </value>
+    <value key="formats">{&#13;
+      "discreet": {&#13;
+          "inline": "span",&#13;
+          "classes": "discreet"&#13;
+      },&#13;
+      "clearfix": {&#13;
+          "block": "div",&#13;
+          "classes": "clearfix"&#13;
+      },&#13;
+      "clip": {&#13;
+          "inline": "span",&#13;
+          "classes": "pat-clippable"&#13;
+      }&#13;
+      }</value>
+    <value key="inline_styles">
+      <element>Bold|bold|bold</element>
+      <element>Italic|italic|italic</element>
+      <element>Underline|underline|underline</element>
+      <element>Strikethrough|strikethrough|strikethrough</element>
+      <element>Superscript|superscript|superscript</element>
+      <element>Subscript|subscript|subscript</element>
+      <element>Code|code|code</element>
+      <element>Clippable|clip|copy</element>
+    </value>
+  </records>
 
+  <records interface="Products.CMFPlone.interfaces.resources.IResourceRegistry" prefix="plone.resources/pat-clippable">
+    <value key="css">
+      <element>++plone++collective.pat_clippable/pat-clippable.less</element>
+    </value>
+    <value key="js">++plone++collective.pat_clippable/pat-clippable.js</value>
+  </records>
+  <records interface="Products.CMFPlone.interfaces.resources.IResourceRegistry" prefix="plone.resources/clipboard">
+    <value key="css"/>
+    <value key="js">++plone++collective.pat_clippable/clipboard.min.js</value>
+  </records>
+  <records interface="Products.CMFPlone.interfaces.resources.IBundleRegistry" prefix="plone.bundles/pat-clippable-bundle">
+    <value key="compile">True</value>
+    <value key="csscompilation">++plone++collective.pat_clippable/pat-clippable.less</value>
+    <value key="depends">plone</value>
+    <value key="develop_css">False</value>
+    <value key="develop_javascript">False</value>
+    <value key="enabled">True</value>
+    <value key="jscompilation">++plone++collective.pat_clippable/pat-clippable-compiled.js</value>
+    <value key="last_compilation"></value>
+    <value key="load_async">False</value>
+    <value key="load_defer">False</value>
+    <value key="merge_with">default</value>
+    <value key="resources">
+      <element>pat-clippable</element>
+      <element>clipboard</element>
+    </value>
+    <value key="stub_js_modules"/>
+  </records>
 </registry>
