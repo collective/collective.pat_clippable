@@ -11,11 +11,12 @@ This mockup pattern decorates any element with a button for one-click copying to
 Features
 --------
 
-- Any element with class `.pat-clippable` will get a clipboard button
+- Any element with class ``.pat-clippable`` will get a clipboard button
 - Clicking the button will copy the content of the element to the clipboard
 - Some styling is applied to indicate what content will be copied
 - TinyMCE gets a *Clippable* format in the **Formats -> Inline** menu
-- Based on https://clipboardjs.com/
+- Not limited to user-generated content - any browser view, template, etc can use ``.pat-clippable``
+- Based on https://clipboardjs.com/ (v2.0.6)
 
 
 Examples

@@ -1,9 +1,23 @@
+.pat-clippable__wrapper {
+    position: relative;
+}
+
+.pat-clippable__wrapper_type_block {
+    display: block;
+}
+
 .pat-clippable__button {
     background-color: #eff3f6;
     line-height: 0.5;
     padding: 2px 4px;
+    position: absolute;
+    top: 0;
     transition: all 0.2s ease-in-out;
     vertical-align: text-top;
+}
+
+.pat-clippable__button_type_block {
+    right: 0;
 }
 
 .pat-clippable__button:hover {
