@@ -40,7 +40,8 @@ require([
       
       if (ClipboardJS.isSupported()) {
 	self.$el.wrap('<span class="pat-clippable__wrapper"></span>')
-	if (self.$el.is('pre')) {
+	console.assert(self.$el.is('pre, header, footer, li'), self.$el)
+	if (self.$el.is('pre,header,footer,li')) {
           self.$el.parent().addClass('pat-clippable__wrapper_type_block')
 	}
         self.$el.after(self.createButton);
