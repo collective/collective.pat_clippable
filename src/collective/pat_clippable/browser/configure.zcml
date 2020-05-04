@@ -18,4 +18,11 @@
       directory="static"
       />
 
+  <browser:page
+      for="*"
+      name="clippable_test_rendering"
+      template="templates/test_rendering.pt"
+      permission="zope.Public"
+      />
+
 </configure>
