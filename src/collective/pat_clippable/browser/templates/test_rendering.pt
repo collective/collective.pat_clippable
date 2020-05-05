@@ -12,9 +12,9 @@
 
 <metal:main fill-slot="main">
 
-<h1 class="documentFirstHeading">Plone User Interface elements test page</h1>
+<h1 class="documentFirstHeading pat-clippable">Plone User Interface elements test page</h1>
 
-<div class="documentDescription">
+<div class="documentDescription pat-clippable">
 This page lists the common user interface elements that exist in Plone, and
 shows you how they are rendered. It also tests a couple of common Internet
 Explorer rendering bugs, so you can see if your changes have triggered any
@@ -26,19 +26,19 @@ bad behaviour on this front.
 Headlines
 </pre>
 
-<h1>Headline h1</h1>
+<h1 class="pat-clippable">Headline h1</h1>
+<p class="pat-clippable">And a paragraph</p>
+<h2 class="pat-clippable">Headline h2</h2>
 <p>And a paragraph</p>
-<h2>Headline h2</h2>
+<h3 class="pat-clippable">Headline h3</h3>
 <p>And a paragraph</p>
-<h3>Headline h3</h3>
+<h4 class="pat-clippable">Headline h4</h4>
 <p>And a paragraph</p>
-<h4>Headline h4</h4>
+<h5 class="pat-clippable">Headline h5</h5>
 <p>And a paragraph</p>
-<h5>Headline h5</h5>
-<p>And a paragraph</p>
-<h6>Headline h6</h6>
+<h6 class="pat-clippable">Headline h6</h6>
 
-<pre>Example document rendering</pre>
+<pre class="pat-clippable">Example document rendering</pre>
 
 <div class="portalMessage info" role="status">
     <strong>
@@ -51,16 +51,16 @@ Headlines
 </div>
 
 <dl class="portalMessage error" role="alert">
-    <dt>
+    <dt class="pat-clippable">
         Error
     </dt>
-    <dd>
+    <dd class="pat-clippable">
         The portalMessage 'error' class, can also contain <a href="#">links</a> - used to
         give the user temporary status messages.
     </dd>
 </dl>
 
-<dl class="portalMessage warning" role="status">
+<dl class="portalMessage warning pat-clippable" role="status">
     <dt>
         Warning
     </dt>
@@ -72,7 +72,7 @@ Headlines
 
 <h1 class="documentFirstHeading">Document Headline</h1>
 
-<div id="plone-document-byline" class="documentByLine">
+<div id="plone-document-byline" class="documentByLine pat-clippable">
     <span class="documentAuthor">
       by
       <a href="http://localhost:8080/Plone/author/admin">admin</a>
@@ -92,14 +92,14 @@ Headlines
    </span>
 </div>
 
-<div class="documentDescription">
+<div class="documentDescription pat-clippable">
 The document description
 </div>
 
-<p>
+<p class="pat-clippable">
 Normal document body text,
-<strong>strong text</strong>,
-<em>emphasised text</em>,
+<strong class="pat-clippable">strong text</strong>,
+<em class="pat-clippable">emphasised text</em>,
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque odio sem, aliquam ut, suscipit at, aliquet non, justo. Vestibulum vitae urna et mi volutpat luctus. Nulla auctor, lacus ut consectetuer sagittis, erat odio vulputate sapien, eu placerat diam mauris id turpis. Aenean quis ipsum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque rutrum. Sed mattis turpis sit amet ipsum viverra pharetra. Nunc facilisis, augue non dapibus gravida, risus quam vulputate quam, non venenatis dui massa in leo. Maecenas scelerisque dapibus libero. Suspendisse potenti.
 example <a href="#">Normal internal site link</a> inside a paragraph,
 example <a href="http://plone.org">External link to plone.org</a>,
@@ -112,7 +112,7 @@ example <a href="feed://some.site">RSS feed link</a>,
 example <a href="irc://some.network/#channel">IRC link</a>.
 </p>
 
-<ul>
+<ul class="pat-clippable">
     <li>Unordered list element 1
         <ul>
             <li>Unordered list subelement 1</li>
@@ -123,8 +123,8 @@ example <a href="irc://some.network/#channel">IRC link</a>.
 </ul>
 
 <ol>
-    <li>Ordered list element 1
-        <ol><li>Ordered list subelement 1</li></ol>
+    <li class="pat-clippable">Ordered list element 1
+        <ol class="pat-clippable"><li>Ordered list subelement 1</li></ol>
     </li>
     <li>Ordered list element 2</li>
     <li>Ordered list element 3</li>
@@ -162,21 +162,21 @@ definition lists. We replace them in the following manners.
 <h4>in listings</h4>
 
 <div>
-  <article>
+  <article class="pat-clippable">
     <heading><a href="">Item one</a></heading>
     <p>Description</p>
   </article>
   <article>
-    <heading><a href="">Item two</a></heading>
+    <heading class="pat-clippable"><a href="">Item two</a></heading>
     <p>Description</p>
   </article>
 </div>
 
 <h2>
-Table of class <code>listing</code>
+Table of class <code class="pat-clippable">listing</code>
 </h2>
 
-<table class="listing" id="someid" summary="Sortable table example">
+<table class="listing pat-clippable" id="someid" summary="Sortable table example">
     <!-- By giving a table an ID, it gets the sortable option.
          Use class="nosort" to override on a table or column basis. -->
     <thead>
@@ -193,7 +193,7 @@ Table of class <code>listing</code>
             <td>Another item</td>
         </tr>
         <tr class="even">
-            <td>Even table item</td>
+            <td class="pat-clippable">Even table item</td>
             <td>Item 2</td>
             <td>Yet another item</td>
         </tr>
@@ -209,7 +209,7 @@ Table of class <code>listing</code>
 Table of class <code>vertical listing</code>
 </h2>
 
-<table class="vertical listing" summary="Vertical listing example">
+<table class="vertical listing pat-clippable" summary="Vertical listing example">
     <tbody>
         <tr>
             <th>Table heading</th>
@@ -236,7 +236,7 @@ Table of class <code>vertical listing</code>
             <div class="formHelp">
                 This is the help for this form field. And <a href="#">links are also possible</a>.
             </div>
-            <input type="text" id="onefield" value="Some content" />
+            <input class="pat-clippable" type="text" id="onefield" value="Some content" />
         </div>
         <div class="field error">
             <label for="anotherfield">Text field with error</label>
@@ -247,7 +247,7 @@ Table of class <code>vertical listing</code>
                 This field is just here to demonstrate an error message.
             </div>
             <div>This is the error message.</div>
-            <input type="text" id="anotherfield" value="Some content" />
+            <input class="pat-clippable" type="text" id="anotherfield" value="Some content" />
         </div>
         <div class="field">
             <label for="onecheckbox">Checkbox</label>

@@ -40,8 +40,7 @@ require([
       
       if (ClipboardJS.isSupported()) {
 	self.$el.wrap('<span class="pat-clippable__wrapper"></span>')
-	console.assert(self.$el.is('pre, header, footer, li'), self.$el)
-	if (self.$el.is('pre,header,footer,li')) {
+	if (self.$el.is(block_elements())) {
           self.$el.parent().addClass('pat-clippable__wrapper_type_block')
 	}
         self.$el.after(self.createButton);
@@ -82,17 +81,31 @@ require([
           $(that).removeClass('pat-clippable_flash')
           $(e.currentTarget).removeClass('pat-clippable__button_flash')
         }, 200)
-        return true
+        return false
       })
       
       var clipboard = new ClipboardJS(button)
     
       clipboard.on('success', function(e) {
-        console.debug('Text:', e.text)
+        console.debug(e.text)
       })
       return button
     }
   });
+
+  var block_elements = function block_elements() {
+    // See https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements
+    var els = 'address,article,aside,blockquote,details,dialog,dd,div,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,li,main,nav,ol,p,pre,section,table,ul'
+    var fields = 'input'
+    return [els,fields].join(',')
+  }
+
+  var table_elements = function table_elements() {
+    // TODO: table elements need special handling
+    var els = 'thead,tbody,tfoot,th,tr,td';
+    return els;
+  }
+
   return Clippable;
 });
 

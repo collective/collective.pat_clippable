@@ -13,9 +13,11 @@ Features
 
 - Any element with class ``.pat-clippable`` will get a clipboard button
 - Clicking the button will copy the content of the element to the clipboard
+- If verbose level is enabled, the copied content will be printed in the browser console
 - Some styling is applied to indicate what content will be copied
 - TinyMCE gets a *Clippable* format in the **Formats -> Inline** menu
 - Not limited to user-generated content - any browser view, template, etc can use ``.pat-clippable``
+- Once installed, visit ``/clippable_test_rendering`` to see several examples and check for any conflicts with your theme.  This template is based on the notorious ``/test_rendering`` page.
 - Based on https://clipboardjs.com/ (v2.0.6)
 
 
