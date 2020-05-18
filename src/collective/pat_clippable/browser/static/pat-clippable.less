@@ -9,7 +9,7 @@
 .pat-clippable__button {
     background-color: #eff3f6;
     line-height: 0.5;
-    padding: 2px 4px;
+    padding: 8px 8px;
     position: absolute;
     top: 0;
     transition: all 0.2s ease-in-out;
@@ -23,8 +23,15 @@
 .pat-clippable__button:hover {
     background-color: #e6ebf1;
     background-image: linear-gradient(-180deg,#f0f3f6,#e6ebf1 90%);
-    background-position: -0.5em;
     border-color: rgba(27,31,35,.35);
+}
+
+.pat-clippable__button_withhover {
+    padding: 2px 4px;
+}
+
+.pat-clippable__button_withhover:hover {
+    background-position: -0.5em;
     padding: 8px 8px;
 }
 
@@ -32,11 +39,14 @@
     margin-top: -3px;
     position: relative;
     top: 1px;
-    width: 7px;
+    width: 13px;
     transition: all 0.2s ease-in-out;
 }
+.pat-clippable__svg_withhover {
+    width: 7px;
+}
 
-.pat-clippable__button:hover .pat-clippable__svg {
+.pat-clippable__button_withhover:hover .pat-clippable__svg {
     width: 13px;
 }
 
